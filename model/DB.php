@@ -1,7 +1,9 @@
 <?php
-
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
+/**
+ * @author Víctor García Gordón
+ * @version Fecha de última modificación 08/01/2025
  */
 
+interface DB{
+    public static function ejecutarConsulta($sentenciaSQL);
+}

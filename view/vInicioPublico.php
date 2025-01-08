@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Víctor García Gordón
- * @version Fecha de última modificación 19/12/2024
+ * @version Fecha de última modificación 08/01/2025
  */
 
 // Cargar el contenido del archivo README.md
