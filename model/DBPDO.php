@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Víctor García Gordón
- * @version Fecha de última modificación 08/01/2025
+ * @version Fecha de última modificación 09/01/2025
  */
 
 class DBPDO implements DB {
@@ -11,26 +11,21 @@ class DBPDO implements DB {
         try {
             // Establecemos la conexión con la BD
             $miDB = new PDO(DSN, USERNAME, PASSWORD);
-
             // Prepara la consulta
-            $oConsulta = $miDB->prepare($sentenciaSQL);
-            
+            $consultaPreparada = $miDB->prepare($sentenciaSQL);          
             // Ejecuta la consulta       
-            $oConsulta->execute();
-            
+            $consultaPreparada->execute();          
             // Devuelvo el resultado
-            return $oConsulta;
+            return $consultaPreparada;
         } catch (PDOException $excepcion) {
+            $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
             // Guardamos en la sesion la pagina actual y le asignamos la de error
             $_SESSION['paginaEnCurso'] = 'error';
-
             // Almaceno un objeto de la clase Error
-            $_SESSION['error'] = new Error($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());
-            
+            $_SESSION['error'] = new Error($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());          
             //Redirige al usuario al index
             header('Location: indexLoginLogoff.php');
-            exit();  
-          
+            exit();           
         } finally {
             // Cierra la conexión con la BD
             unset($miDB);
