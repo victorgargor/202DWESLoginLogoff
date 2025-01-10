@@ -7,10 +7,10 @@
 class DBPDO implements DB {
     
     #[\Override]
-    public static function ejecutarConsulta($sentenciaSQL) {
+    public static function ejecutarConsulta($sentenciaSQL, $parametros = null) {
         try {
             // Establecemos la conexión con la BD
-            $miDB = new PDO(DSN, USERNAME, PASSWORD);
+            $miDB = new PDO(DSN, USER, PASSWORD);
             // Prepara la consulta
             $consultaPreparada = $miDB->prepare($sentenciaSQL);          
             // Ejecuta la consulta       
@@ -22,7 +22,7 @@ class DBPDO implements DB {
             // Guardamos en la sesion la pagina actual y le asignamos la de error
             $_SESSION['paginaEnCurso'] = 'error';
             // Almaceno un objeto de la clase Error
-            $_SESSION['error'] = new Error($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());          
+            $_SESSION['error'] = new ErrorApp($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());          
             //Redirige al usuario al index
             header('Location: indexLoginLogoff.php');
             exit();           

@@ -9,7 +9,7 @@ require_once 'core/lValidacionFormularios.php';
 
 require_once 'model/DB.php';
 require_once 'model/DBPDO.php';
-require_once 'model/Error.php';
+require_once 'model/ErrorApp.php';
 require_once 'model/Usuario.php';
 require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
@@ -25,7 +25,7 @@ $aControladores = [
     'miCuenta' => 'controller/cMiCuenta.php',
     'borrarCuenta' => 'controller/cborrarCuenta.php',
     'wip' => 'controller/cWIP.php',
-    'error' => 'controller/cError.php'
+    'error' => 'controller/cErrorApp.php'
 ];
 
 // Creamos un array para las vistas
@@ -40,5 +40,5 @@ $aVistas = [
     'miCuenta' => 'view/vMiCuenta.php',
     'borrarCuenta' => 'view/vborrarCuenta.php',
     'wip' => 'view/vWIP.php',
-    'error' => 'view/vError.php'
+    'error' => 'view/vErrorApp.php'
 ];

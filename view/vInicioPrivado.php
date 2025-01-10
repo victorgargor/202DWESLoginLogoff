@@ -13,8 +13,5 @@
     ?>
 </div>
 <form>
-    <input type="submit" name="detalle" value="Detalle">
-</form>
-<form>
     <input type="submit" name="cerrarsesion" value="Cerrar Sesión">
 </form>

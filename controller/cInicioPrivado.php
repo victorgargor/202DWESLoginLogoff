@@ -1,15 +1,16 @@
 <?php
 /**
  * @author Víctor García Gordón
- * @version Fecha de última modificación 09/01/2025
+ * @version Fecha de última modificación 10/01/2025
  */
 
 // Iniciamos la sesión o reanudamos la existente mediante esta función
 session_start();
 
 // Verificamos si el usuario está autenticado
-if (empty($_SESSION['usuarioDAW202AppLoginLogoffTema5'])) {
-    header("Location: login.php");
+if (empty($_SESSION['usuarioMiAplicacion'])) {
+    $_SESSION['paginaEnCurso'] = 'login';
+    require_once $aControladores[$_SESSION['paginaEnCurso']];
     exit();
 }
 
@@ -17,7 +18,7 @@ if (empty($_SESSION['usuarioDAW202AppLoginLogoffTema5'])) {
 $idioma = isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'es';
 
 // Obtener el objeto completo del usuario desde la sesión
-$oUsuarioActivo = $_SESSION['usuarioDAW202AppLoginLogoffTema5'];
+$oUsuarioActivo = $_SESSION['usuarioMiAplicacion'];
 
 // Mostrar información del usuario
 $nombreUsuario = $oUsuarioActivo->T01_DescUsuario;
@@ -61,16 +62,11 @@ $mensaje = str_replace(
 
 echo "<p id = 'mensaje-bienvenida'>" . $mensaje . "</p>";
 
-if (isset($_REQUEST['detalle'])) {
-    // Redirige a la página de detalle
-    header("Location: detalle.php");
-    exit();
-}
 
 // Cerramos la sesión
 if (isset($_REQUEST['cerrarsesion'])) {
     session_destroy();
-    header("Location: ../indexProyectoLoginLogoffTema5.php");
+    header("Location: ../indexLoginLogoff.php");
     exit();
 }
 

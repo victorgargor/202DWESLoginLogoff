@@ -16,7 +16,7 @@ $entradaOK = true;
 
 $aErrores = [
     'usuario' => '',
-    'contrasena' => ''
+    'password' => ''
 ];
 
 if (isset($_REQUEST['iniciarsesion'])) { 
@@ -24,7 +24,7 @@ if (isset($_REQUEST['iniciarsesion'])) {
     $_SESSION['paginaAnterior']='login';
 
     // Validamos si el usuario existe y es oUsuarioActivo 
-    $oUsuarioActivo = UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['contrasena']);
+    $oUsuarioActivo = UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['password']);
 
     // Comprobamos si '$oUsuarioActivo' no esta declarado o es 'null'
     if (!isset($oUsuarioActivo)) {
@@ -33,7 +33,7 @@ if (isset($_REQUEST['iniciarsesion'])) {
    
     $aErrores = [
         'usuario' => (!$oUsuarioActivo) ? 'Error de autentificacion.' : validacionFormularios::comprobarAlfaNumerico($_REQUEST['usuario'], 32, 4, 1),
-        'contrasena' => (!$oUsuarioActivo) ? 'Error de autentificacion.' : validacionFormularios::validarPassword($_REQUEST['contrasena'], 32, 4, 2, 1)
+        'password' => (!$oUsuarioActivo) ? 'Error de autentificacion.' : validacionFormularios::validarPassword($_REQUEST['password'], 32, 4, 2, 1)
     ];
 
     // Recorre aErrores para ver si hay algun error
@@ -55,7 +55,7 @@ if ($entradaOK) {
         // Actualizamos la fecha y hora de la última conexión
         $oUsuarioActivo = UsuarioPDO::registrarUltimaConexion($oUsuarioActivo);
 
-        $_SESSION['usuario'] = $oUsuarioActivo;
+        $_SESSION['usuarioMiAplicacion'] = $oUsuarioActivo;
         $_SESSION['paginaEnCurso'] = 'inicioPrivado';
 
         //Importamos la sesion se la paginaActiva
