@@ -466,36 +466,28 @@ footer img {
     font-weight: bold;
 }
 
+/* Separar el botón "Volver" del contenedor de detalles */
+.error-details {
+    margin-bottom: 30px; /* Añadir espacio inferior */
+}
+
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    font-size: 18px;
-    padding: 12px 25px;
-    transition: background-color 0.3s ease;
+    background-color: #ffffff;
+    color: #24292f;
+    font-size: 14px;
+    padding: 12px 25px; /* Espaciado interno */  
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-.error-container form {
-    margin-top: 20px;
-}
-
-.error-container form button {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
-    padding: 10px 25px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.error-container form button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #0366d6;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
 /* Si la página de error debe ser completamente fija en el cuerpo */

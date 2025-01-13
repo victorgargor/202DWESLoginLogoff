@@ -4,9 +4,6 @@
  * @version Fecha de última modificación 10/01/2025
  */
 
-// Iniciamos la sesión o reanudamos la existente mediante esta función
-session_start();
-
 // Verificamos si el usuario está autenticado
 if (empty($_SESSION['usuarioMiAplicacion'])) {
     $_SESSION['paginaEnCurso'] = 'login';
@@ -21,9 +18,9 @@ $idioma = isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'es';
 $oUsuarioActivo = $_SESSION['usuarioMiAplicacion'];
 
 // Mostrar información del usuario
-$nombreUsuario = $oUsuarioActivo->T01_DescUsuario;
-$numConexiones = $oUsuarioActivo->T01_NumConexiones + 1;
-$fechaUltimaConexion = $oUsuarioActivo->T01_FechaHoraUltimaConexion;
+$nombreUsuario = $oUsuarioActivo->getDescUsuario(); // Cambié el acceso directo por el getter
+$numConexiones = $oUsuarioActivo->getNumAccesos() + 1; // Cambié el acceso directo por el getter
+$fechaUltimaConexion = $oUsuarioActivo->getFechaHoraUltimaConexion(); // Cambié el acceso directo por el getter
 
 // Formatear la fecha de la última conexión
 $fechaUltimaConexionFormateada = date("d/m/Y H:i:s", strtotime($fechaUltimaConexion));
@@ -66,7 +63,7 @@ echo "<p id = 'mensaje-bienvenida'>" . $mensaje . "</p>";
 // Cerramos la sesión
 if (isset($_REQUEST['cerrarsesion'])) {
     session_destroy();
-    header("Location: ../indexLoginLogoff.php");
+    header("Location: indexLoginLogoff.php");
     exit();
 }
 

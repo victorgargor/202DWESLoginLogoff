@@ -5,7 +5,7 @@
  */
 ?>
 
-<img class="aplicacion" src="../doc/aplicacion.png" alt="aplicacion">
+<img class="aplicacion" src="doc/aplicacion.png" alt="aplicacion">
 <div class="descripcion-usuario">
     <?php
         // Muestra el nombre del usuario en mayúsculas
