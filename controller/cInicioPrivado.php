@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @author Víctor García Gordón
@@ -11,13 +12,20 @@ if (empty($_SESSION['usuarioMiAplicacion'])) {
     exit();
 }
 
+// Cerramos la sesión
+if (isset($_REQUEST['cerrarsesion'])) {
+    session_destroy();
+    header("Location: indexLoginLogoff.php");
+    exit();
+}
+
 // Obtener el idioma de la cookie, si no está establecida, se usa 'es' como predeterminado
 $idioma = isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'es';
 
 // Obtener el objeto completo del usuario desde la sesión
 $oUsuarioActivo = $_SESSION['usuarioMiAplicacion'];
 
-// Mostrar información del usuario
+// Obtener los datos del usuario
 $nombreUsuario = $oUsuarioActivo->getDescUsuario(); // Cambié el acceso directo por el getter
 $numConexiones = $oUsuarioActivo->getNumAccesos() + 1; // Cambié el acceso directo por el getter
 $fechaUltimaConexion = $oUsuarioActivo->getFechaHoraUltimaConexion(); // Cambié el acceso directo por el getter
@@ -57,15 +65,11 @@ $mensaje = str_replace(
     $mensaje
 );
 
-echo "<p id = 'mensaje-bienvenida'>" . $mensaje . "</p>";
+// Array con los datos que se enviarán a la vista
+$datosVista = [
+    'mensajeBienvenida' => $mensaje,
+    'nombreUsuario' => strtoupper($nombreUsuario), // Nombre en mayúsculas
+];
 
-
-// Cerramos la sesión
-if (isset($_REQUEST['cerrarsesion'])) {
-    session_destroy();
-    header("Location: indexLoginLogoff.php");
-    exit();
-}
-
-// Cargo la vInicioPrivado
+// Incluimos la vista
 require_once $aVistas['layout'];
