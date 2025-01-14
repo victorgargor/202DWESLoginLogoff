@@ -1,3 +1,9 @@
+<?php
+/**
+ * @author Víctor García Gordón
+ * @version Fecha de última modificación 08/01/2025
+ */
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -16,10 +16,14 @@ $readmeHTML = $Parsedown->text($readmeContent);
 <form>
     <input type="submit" name="login" value="Login">
 </form>
-<section>
-    <div id="readme-content">
-        <?= $readmeHTML; ?>
+<section class="content-container">
+    <div class="left-column">
+        <div id="readme-content">
+            <?= $readmeHTML; ?>
+        </div>
     </div>
+</section>
+<section>
     <div>
         <a class="españa" href="?idioma=es">
             <img src="doc/españa.png" alt="es">

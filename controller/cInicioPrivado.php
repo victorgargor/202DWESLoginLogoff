@@ -22,6 +22,7 @@ if (isset($_REQUEST['cerrarsesion'])) {
 // Obtener el idioma de la cookie, si no está establecida, se usa 'es' como predeterminado
 $idioma = isset($_COOKIE['idioma']) ? $_COOKIE['idioma'] : 'es';
 
+
 // Obtener el objeto completo del usuario desde la sesión
 $oUsuarioActivo = $_SESSION['usuarioMiAplicacion'];
 
