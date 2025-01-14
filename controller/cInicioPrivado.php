@@ -21,9 +21,8 @@ if (isset($_REQUEST['detalle'])) {
 
 // Si se pulsa el botón de detalle
 if (isset($_REQUEST['errorapp'])) {
-    $_SESSION['paginaEnCurso'] = 'error';
-    $_SESSION['paginaAnterior'] = 'inicioPrivado';
-    require_once $aControladores[$_SESSION['paginaEnCurso']];
+    $consulta = "SELECT * FRPM T04_DepartamentosActivos";
+    DBPDO::ejecutarConsulta($consulta);
     exit();
 }
 

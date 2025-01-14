@@ -8,21 +8,17 @@
 if (isset($_REQUEST['volver'])) {    
     // Asigno a la página en curso la página anterior
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    
     // Cierro la sesión 
-    unset($_SESSION['error']); 
-   
+    unset($_SESSION['error']);    
     // Redirijo al index
     header('Location: ../202DWESLoginLogoff/indexLoginLogoff.php'); 
     exit();
 }
-
-if (isset($_SESSION['error'])) {
-// Asigno los datos de $_SESSION['error']
-$codError = $_SESSION['error']->getCodError(); // Código del error
-$descError = $_SESSION['error']->getDescError(); // Descripción del error
-$archivoError = $_SESSION['error']->getArchivoError(); // Archivo donde ocurrio el error
-$lineaError = $_SESSION['error']->getLineaError(); // Línea en la cual se produjo el error
-}
+$datosVista = [
+    'error' => $codError = $_SESSION['error']->getCodError(),
+    'descripcion' => $descError = $_SESSION['error']->getDescError(),
+    'archivo' => $archivoError = $_SESSION['error']->getArchivoError(),
+    'linea' => $lineaError = $_SESSION['error']->getLineaError(),
+];
 
 require_once $aVistas['layout']; // Cargo la vista
