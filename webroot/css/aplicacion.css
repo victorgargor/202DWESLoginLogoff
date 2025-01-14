@@ -108,6 +108,35 @@ input[name="detalle"]:active {
     transform: translateY(0);
 }
 
+input[name="errorapp"] {
+    background-color: #ffffff;
+    color: #24292f;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    position: fixed;
+    top: 17.5px;
+    left: 150px;
+    z-index: 1001;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[name="errorapp"]:hover {
+    background-color: #0366d6;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+input[name="errorapp"]:active {
+    background-color: #005bb5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
 input[name="iniciarsesion"] {
     background-color: #ffffff;
     color: #24292f;

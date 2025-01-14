@@ -12,6 +12,21 @@ if (empty($_SESSION['usuarioMiAplicacion'])) {
     exit();
 }
 
+// Si se pulsa el botón de detalle
+if (isset($_REQUEST['detalle'])) {
+    $_SESSION['paginaEnCurso'] = 'detalle';
+    require_once $aControladores[$_SESSION['paginaEnCurso']];
+    exit();
+}
+
+// Si se pulsa el botón de detalle
+if (isset($_REQUEST['errorapp'])) {
+    $_SESSION['paginaEnCurso'] = 'error';
+    $_SESSION['paginaAnterior'] = 'inicioPrivado';
+    require_once $aControladores[$_SESSION['paginaEnCurso']];
+    exit();
+}
+
 // Cerramos la sesión
 if (isset($_REQUEST['cerrarsesion'])) {
     session_destroy();

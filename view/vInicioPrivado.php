@@ -12,7 +12,6 @@
     <title>Bienvenida</title>
 </head>
 <body>
-    <img class="aplicacion" src="doc/aplicacion.png" alt="aplicacion">
     <div class="descripcion-usuario">
         <?php
             // Mostrar el nombre del usuario en mayúsculas
@@ -27,6 +26,12 @@
     </p>
     <form action="" method="POST">
         <input type="submit" name="cerrarsesion" value="Cerrar Sesión">
+    </form>
+    <form action="" method="POST">
+        <input type="submit" name="detalle" value="Detalle">
+    </form>
+    <form action="" method="POST">
+        <input type="submit" name="errorapp" value="Error">
     </form>
 </body>
 </html>

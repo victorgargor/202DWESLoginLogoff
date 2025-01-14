@@ -17,10 +17,12 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
+if (isset($_SESSION['error'])) {
 // Asigno los datos de $_SESSION['error']
 $codError = $_SESSION['error']->getCodError(); // Código del error
 $descError = $_SESSION['error']->getDescError(); // Descripción del error
 $archivoError = $_SESSION['error']->getArchivoError(); // Archivo donde ocurrio el error
 $lineaError = $_SESSION['error']->getLineaError(); // Línea en la cual se produjo el error
+}
 
-require_once $aVistas['layout']; // Cargo la vista de 'error'
+require_once $aVistas['layout']; // Cargo la vista

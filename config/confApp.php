@@ -18,6 +18,7 @@ require_once 'model/UsuarioPDO.php';
 $aControladores = [
     'inicioPublico' => 'controller/cInicioPublico.php',
     'login' => 'controller/cLogin.php',
+    'detalle' => 'controller/cDetalle.php',
     'inicioPrivado' => 'controller/cInicioPrivado.php',
     'tecnologias' => 'controller/cTecnologias.php',
     'rss' => 'controller/cRSS.php',
@@ -33,6 +34,7 @@ $aVistas = [
     'layout' => 'view/Layout.php',
     'inicioPublico' => 'view/vInicioPublico.php',
     'login' => 'view/vLogin.php',
+    'detalle' => 'view/vDetalle.php',
     'inicioPrivado' => 'view/vInicioPrivado.php',
     'tecnologias' => 'view/vTecnologias.php',
     'rss' => 'view/vRSS.php',

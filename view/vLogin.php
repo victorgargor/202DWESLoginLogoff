@@ -17,9 +17,6 @@
     <div class="form-group">
         <input type="submit" name="iniciarsesion" value="Iniciar Sesión">
     </div>
-    <div class="form-group">
-        <input type="submit" name="registrarse" value="Registrarse">
-    </div>
 </form>
 <form>
     <input type="submit" name="volver" value="Volver">
