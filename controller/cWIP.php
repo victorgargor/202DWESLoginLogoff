@@ -7,9 +7,7 @@
 // Si se pulsa el botón volver
 if (isset($_REQUEST['volver'])) {    
     // Asigno a la página en curso la página anterior
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    // Cierro la sesión 
-    unset($_SESSION['error']);    
+    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];   
     // Redirijo al index
     header('Location: ../202DWESLoginLogoff/indexLoginLogoff.php'); 
     exit();
