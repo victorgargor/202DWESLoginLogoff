@@ -11,12 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenida</title>
 </head>
-<body>
-    <div class="descripcion-usuario">
-        <?php
-            // Mostrar el nombre del usuario en mayúsculas
-            echo $nombreUsuario;
-        ?>
+<body> 
+    <div class="descripcion-usuario">     
+        <?php echo($oUsuarioActivo->getDescUsuario()); ?>
     </div>
     <p id="mensaje-bienvenida">
         <?php

@@ -16,7 +16,10 @@
         <header>      
             <h1 id="inicio">APLICACIÓN LOGIN LOGOFF MVC</h1>
         </header>
-        <main>              
+        <main>  
+            <p id="logo">
+                <img src="doc/logo.jpg" alt="logo" width="50px" height="50px"/>
+            </p>    
             <div class="center">
                 <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
             </div>

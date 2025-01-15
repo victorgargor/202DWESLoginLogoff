@@ -17,7 +17,7 @@
             <p><strong>LÍNEA:</strong> <?php echo $lineaError; ?></p>
         </div>
 
-        <form name="Programa" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="mt-4">
+        <form name="Programa" action="" method="post" class="mt-4">
             <button type="submit" class="btn btn-primary" name="volver">Volver</button>
         </form>
     </div>

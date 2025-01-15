@@ -10,6 +10,13 @@ body {
     justify-content: space-between;
 }
 
+#logo{
+    position: fixed;
+    top: -7px;
+    left: 7%;
+    z-index: 3333; 
+}
+
 #mensaje-bienvenida {
     display: flex;
     justify-content: center;
@@ -469,7 +476,7 @@ footer img {
     display: inline-block;
     position: fixed;
     top: 22px;
-    left: 200px;
+    left: 300px;
     z-index: 1001;
 }
 
@@ -478,7 +485,7 @@ footer img {
     display: inline-block;
     position: fixed;
     top: 24px;
-    left: 300px;
+    left: 400px;
     z-index: 1001;
     height: 50px;
 }
@@ -488,7 +495,7 @@ footer img {
     display: inline-block;
     position: fixed;
     top: 22px;
-    left: 400px;
+    left: 500px;
     z-index: 1001;
 }
 .españa img , .inglaterra img, .portugal img{
