@@ -20,9 +20,23 @@ if (isset($_REQUEST['detalle'])) {
 }
 
 // Si se pulsa el botón de detalle
-if (isset($_REQUEST['errorapp'])) {
+if (isset($_REQUEST['error'])) {
     $consulta = "SELECT * FRPM T04_DepartamentosActivos";
     DBPDO::ejecutarConsulta($consulta);
+    exit();
+}
+
+// Si se pulsa el botón de detalle
+if (isset($_REQUEST['rest'])) {
+    $_SESSION['paginaEnCurso'] = 'wip';
+    require_once $aControladores[$_SESSION['paginaEnCurso']];
+    exit();
+}
+
+// Si se pulsa el botón de detalle
+if (isset($_REQUEST['mtodepartamentos'])) {
+    $_SESSION['paginaEnCurso'] = 'wip';
+    require_once $aControladores[$_SESSION['paginaEnCurso']];
     exit();
 }
 

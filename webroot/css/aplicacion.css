@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #f6f8fa;
     color: #24292f;
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,22 +12,22 @@ body {
 
 #mensaje-bienvenida {
     display: flex;
-    justify-content: center; 
-    align-items: flex-end;    
-    height: 100%;           
-    margin: 0;              
-    padding: 20px;           
-    color: #24292f;         
-    font-size: 18px;        
-    text-align: center;      
-    line-height: 1.5;       
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    color: #24292f;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 table {
-    width: 80%; 
-    margin: 20px auto; 
+    width: 80%;
+    margin: 20px auto;
     border-collapse: collapse;
-    background-color: white; 
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,14 +37,14 @@ td {
 }
 
 td strong {
-    color: #0366d6; 
+    color: #0366d6;
 }
 
 h2 {
     color: #24292f;
     font-size: 20px;
     margin: 20px 0;
-    text-align: center; 
+    text-align: center;
 }
 
 h2.error {
@@ -74,7 +74,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 100vh;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -84,13 +84,13 @@ input[name="detalle"] {
     color: #24292f;
     font-size: 14px;
     padding: 8px 20px;
-    border: 1px solid #e1e4e8;
+    border: 1px solid #24292f;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     position: fixed;
-    top: 17.5px;
-    left: 20px;
+    top: 150px;
+    left: 300px;
     z-index: 1001;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -108,30 +108,88 @@ input[name="detalle"]:active {
     transform: translateY(0);
 }
 
-input[name="errorapp"] {
+input[name="error"] {
     background-color: #ffffff;
     color: #24292f;
     font-size: 14px;
     padding: 8px 20px;
-    border: 1px solid #e1e4e8;
+    border: 1px solid #24292f;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     position: fixed;
-    top: 17.5px;
-    left: 150px;
+    top: 150px;
+    left: 39%;
     z-index: 1001;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-input[name="errorapp"]:hover {
+input[name="error"]:hover {
     background-color: #0366d6;
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
-input[name="errorapp"]:active {
+input[name="error"]:active {
+    background-color: #005bb5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+input[name="mtodepartamentos"] {
+    background-color: #ffffff;
+    color: #24292f;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: 1px solid #24292f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    position: fixed;
+    top: 150px;
+    right: 300px;
+    z-index: 1001;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[name="mtodepartamentos"]:hover {
+    background-color: #0366d6;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+input[name="mtodepartamentos"]:active {
+    background-color: #005bb5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+input[name="rest"] {
+    background-color: #ffffff;
+    color: #24292f;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: 1px solid #24292f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    position: fixed;
+    top: 150px;
+    right: 39%;
+    z-index: 1001;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[name="rest"]:hover {
+    background-color: #0366d6;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+input[name="rest"]:active {
     background-color: #005bb5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
@@ -146,7 +204,7 @@ input[name="iniciarsesion"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100%; 
+    width: 100%;
 }
 
 input[name="iniciarsesion"]:hover, input[name="registrarse"]:hover{
@@ -174,7 +232,7 @@ input[name="registrarse"] {
     width: 100%; /* Que ocupe todo el ancho del formulario */
 }
 
-input[name="login"], input[name="volver"], input[name="cerrarsesion"], 
+input[name="login"], input[name="volver"], input[name="cerrarsesion"],
 input[name="cancelar"], input[name="aceptar"] {
     background-color: #ffffff;
     color: #24292f;
@@ -191,7 +249,7 @@ input[name="cancelar"], input[name="aceptar"] {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-input[name="login"]:hover, input[name="volver"]:hover, input[name="cerrarsesion"]:hover, 
+input[name="login"]:hover, input[name="volver"]:hover, input[name="cerrarsesion"]:hover,
 input[name="cancelar"]:hover, input[name="aceptar"]:hover {
     background-color: #0366d6;
     color: #ffffff;
@@ -199,7 +257,7 @@ input[name="cancelar"]:hover, input[name="aceptar"]:hover {
     transform: translateY(-2px);
 }
 
-input[name="login"]:active, input[name="volver"]:active, input[name="cerrarsesion"]:active, 
+input[name="login"]:active, input[name="volver"]:active, input[name="cerrarsesion"]:active,
 input[name="cancelar"]:active, input[name="aceptar"]:active{
     background-color: #005bb5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -250,8 +308,8 @@ footer img {
     line-height: 1.6;
 }
 
-#readme-content h1, 
-#readme-content h2, 
+#readme-content h1,
+#readme-content h2,
 #readme-content h3 {
     border-bottom: 1px solid #e1e4e8;
     padding-bottom: 4px;
@@ -332,7 +390,7 @@ footer img {
 
 #readme-content div {
     text-align: center;
-    margin-top: 20px; 
+    margin-top: 20px;
     position: fixed;
 }
 
@@ -372,9 +430,9 @@ footer img {
 .descripcion-usuario {
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase; 
-    color: white; 
-    width: 100%; 
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
 }
 
 .descripcion-usuario {
@@ -407,40 +465,40 @@ footer img {
 }
 
 .españa{
-    margin: 0 10px; 
+    margin: 0 10px;
     display: inline-block;
     position: fixed;
     top: 22px;
-    left: 100px;
+    left: 200px;
     z-index: 1001;
 }
 
 .inglaterra{
-    margin: 0 10px; 
+    margin: 0 10px;
     display: inline-block;
     position: fixed;
     top: 24px;
-    left: 200px;
+    left: 300px;
     z-index: 1001;
     height: 50px;
 }
 
 .portugal{
-    margin: 0 10px; 
+    margin: 0 10px;
     display: inline-block;
     position: fixed;
     top: 22px;
-    left: 300px;
+    left: 400px;
     z-index: 1001;
 }
 .españa img , .inglaterra img, .portugal img{
-    width: 40px; 
-    height: auto; 
-    transition: transform 0.3s ease; 
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .españa img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .inglaterra img:hover {
@@ -504,7 +562,7 @@ footer img {
     background-color: #ffffff;
     color: #24292f;
     font-size: 14px;
-    padding: 12px 25px; /* Espaciado interno */  
+    padding: 12px 25px; /* Espaciado interno */
     cursor: pointer; /* Cursor de puntero */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     border: 1px solid #e1e4e8;
@@ -531,6 +589,36 @@ footer img {
     align-items: center;
 }
 
+/* Container for centering content */
+.contenedor {
+    text-align: center;
+}
+
+/* Content styling */
+.contenido {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2d333b;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header text styling */
+#h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Paragraph text styling */
+#p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #a8b0b9;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -548,13 +636,13 @@ footer img {
     footer {
         padding: 10px;
     }
-    
+
     #readme-content img {
-        max-height: 300px; 
+        max-height: 300px;
     }
-    
+
     .bandera img {
-        width: 35px; 
+        width: 35px;
     }
 }
 

@@ -16,7 +16,7 @@
         <header>      
             <h1 id="inicio">APLICACIÓN LOGIN LOGOFF MVC</h1>
         </header>
-        <main>
+        <main>              
             <div class="center">
                 <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
             </div>

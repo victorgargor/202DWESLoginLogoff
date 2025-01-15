@@ -31,7 +31,13 @@
         <input type="submit" name="detalle" value="Detalle">
     </form>
     <form action="" method="POST">
-        <input type="submit" name="errorapp" value="Error">
+        <input type="submit" name="error" value="Error">
+    </form>
+    <form action="" method="POST">
+        <input type="submit" name="mtodepartamentos" value="MToDepartamentos">
+    </form>
+     <form action="" method="POST">
+        <input type="submit" name="rest" value="REST">
     </form>
 </body>
 </html>
