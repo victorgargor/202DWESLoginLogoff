@@ -26,6 +26,7 @@
         </main>
         <footer>
             <div>
+                <a><img src="doc/logo.jpg" alt="logo" width="50px" height="50px"/></a>
                 <a href="/index.html">Víctor García Gordón</a>
                 <a href="/202DWESProyectoDWES/indexProyectoDWES.php">DWES</a>
                 <a target="blank" href="doc/curriculum.pdf"><img src="doc/curriculum.jpg" alt="curriculum"></a>
