@@ -1,37 +1,65 @@
+body, html {
+    margin: 0;
+    height: 100%; /* Asegura que el contenedor principal ocupe toda la altura de la ventana */
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
     background-color: #f6f8fa;
     color: #24292f;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .carrusel {
     position: relative;
     width: 1200px;
+    height: 950px;
     overflow: hidden;
+    margin: 0 auto;  /* Centra el carrusel en la página */
 }
 
 .carrusel-pdf {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease;  /* Transición suave al mover el carrusel */
 }
 
 .pdf-item {
-    display: none;
-    width: 1200px;
+    display: none;               /* Los elementos se ocultan por defecto */
+    position: relative;
+    top: 40px;
+    left: 28%;
+    width: 850px;                 /* Cada pdf-item ocupará el 100% del espacio */
+    height: 900px;                /* Cada pdf-item ocupará todo el alto disponible */
 }
 
 .pdf-item.active {
-    display: block;
+    display: block;               /* Solo el item activo se muestra */
+}
+
+.pdf-container {
+    width: 68%;                 /* El contenedor ocupa todo el tamaño disponible */
+    height: 86%;                /* El contenedor ocupa toda la altura */
+    display: flex;               /* Usamos flexbox para centrar el contenido dentro */
+    justify-content: center;     /* Centra el contenido horizontalmente */
+    align-items: center;         /* Centra el contenido verticalmente */
+    overflow: hidden;            /* Oculta cualquier desbordamiento */
+    background-color: #f9f9f9;   /* Opcional: color de fondo */
+}
+
+.pdf-container canvas {
+    width: 100%;                 /* El canvas ocupará el 100% del ancho del contenedor */
+    height: 100%;                /* El canvas ocupará el 100% de la altura */
+    display: block;  
 }
 
 .nombre-pdf { 
-    text-align: center;
+    position: relative;
+    top: 80px;
+    left: -225px;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -342,6 +370,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 11px;
     z-index: 1000;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
