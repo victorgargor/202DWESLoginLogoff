@@ -28,7 +28,7 @@
             <div>
                 <a><img src="doc/logo.jpg" alt="logo" width="50px" height="50px"/></a>
                 <a href="/index.html">Víctor García Gordón</a>
-                <a href="/202DWESProyectoDWES/indexProyectoDWES.php">DWES</a>
+                <a href="doc/index.html">PHPDocumentor</a>
                 <a target="blank" href="doc/curriculum.pdf"><img src="doc/curriculum.jpg" alt="curriculum"></a>
                 <a target="blank" href="https://github.com/victorgargor/202DWESLoginLogoff"><img src="doc/github.png" alt="github"></a>
                 <a target="blank" href="https://github.com">Web Imitada</a>
